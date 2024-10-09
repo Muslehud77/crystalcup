@@ -1,0 +1,132 @@
+/* General Styles - unchanged */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #FFFFFF;
+    margin: 0;
+    padding: 0;
+    color: #272727;
+}
+
+.logo img {
+    width: 150px;
+    margin-top: 20px;
+}
+
+h1 {
+    color: #E2521C;
+    font-size: 2em;
+}
+
+button {
+    padding: 12px 25px;
+    margin: 15px;
+    font-size: 18px;
+    background-color: #E2521C; /* Burnt orange for buttons */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.menu-gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.menu-gallery img {
+    width: 200px;
+    margin: 15px;
+    border: 3px solid #B83E1F;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.menu-gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow: auto; /* Allow scrolling */
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 80%; /* Limit the width of the image */
+    max-height: 90vh; /* Max height limited to 90% of the viewport height */
+    object-fit: contain; /* Ensure the image scales correctly */
+}
+
+.modal-content {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #f5a623;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Media Queries - unchanged */
+@media only screen and (max-width: 768px) {
+    .menu-gallery img {
+        width: 150px;
+    }
+
+    button {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .logo img {
+        width: 120px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 8px 18px;
+    }
+
+    .menu-gallery img {
+        width: 120px;
+        margin: 10px;
+    }
+}
