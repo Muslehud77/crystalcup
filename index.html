@@ -4,18 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Restaurant Menu</title>
+     <link rel="icon" href="images/logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="logo">
-        <img src="images/logo.png" alt="Restaurant Logo">
+     <div class="logo">
+            <img src="images/logo.png" alt="Restaurant Logo">
+        </div>
+
+        <h1>Welcome to CrystalCup</h1>
+
+        
+        <h2>Panchlaish Branch</h2>
+
+        <div class="menu-gallery">
+            <img src="https://res.cloudinary.com/dju2bvvjg/image/upload/v1728482159/menu5_w3c679.avif" alt="Menu Item 5 Pachlaish" onclick="openModal('https://res.cloudinary.com/dju2bvvjg/image/upload/v1728482159/menu5_w3c679.avif')">
+            <img src="https://res.cloudinary.com/dju2bvvjg/image/upload/v1728482161/menu6_hn4lve.avif" alt="Menu Item 6 Pachlaish" onclick="openModal('https://res.cloudinary.com/dju2bvvjg/image/upload/v1728482161/menu6_hn4lve.avif')">
+        </div>
+
+        <h2>Chawkbazar Branch</h2>
+
+        <div class="menu-gallery">
+            <img src="https://res.cloudinary.com/dju2bvvjg/image/upload/v1728482158/menu1_hbecix.avif" alt="Menu Item 1"  onclick="openModal('https://res.cloudinary.com/dju2bvvjg/image/upload/v1728482158/menu1_hbecix.avif')">
+            <img src="https://res.cloudinary.com/dju2bvvjg/image/upload/v1728482158/menu2_ighoaa.avif" alt="Menu Item 2"  onclick="openModal('https://res.cloudinary.com/dju2bvvjg/image/upload/v1728482158/menu2_ighoaa.avif')">
+            <img src="https://res.cloudinary.com/dju2bvvjg/image/upload/v1728482159/menu3_jyznyc.avif" alt="Menu Item 3"  onclick="openModal('https://res.cloudinary.com/dju2bvvjg/image/upload/v1728482159/menu3_jyznyc.avif')">
+            <img src="https://res.cloudinary.com/dju2bvvjg/image/upload/v1728482160/menu4_wuz5g5.avif" alt="Menu Item 4"  onclick="openModal('https://res.cloudinary.com/dju2bvvjg/image/upload/v1728482160/menu4_wuz5g5.avif')">
+        </div>
+
+
+    <!-- Modal Section -->
+    <div id="imageModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div class="modalImageContainer">
+            <img class="modal-content" id="modalImage">
+        </div>
+        <div id="caption"></div>
     </div>
-    
-    <h1>Welcome to CrystalCup</h1>
-    
-    <div class="menu-buttons">
-        <a href="unit1.html"><button>Unit-1 (Saf-Amin) Menu</button></a>
-        <a href="unit2.html"><button>Unit-2 (Pachlaish) Menu</button></a>
-    </div>
+
+    <script>
+        function openModal(imageSrc) {
+            document.getElementById("imageModal").style.display = "block";
+            document.getElementById("modalImage").src = imageSrc;
+        }
+
+        function closeModal() {
+            document.getElementById("imageModal").style.display = "none";
+        }
+    </script>
 </body>
 </html>
